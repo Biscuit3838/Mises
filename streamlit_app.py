@@ -47,7 +47,7 @@ def calculs_start(l, limit) :
     return mises, l_cal
 
 def calculs_rec(curr, l_ori, limit) :
-    l = l_ori.copy
+    l = l_ori.copy()
     l.reverse()
     for i in range(len(l)):
         if sum(curr) + l[i] == limit:
