@@ -22,7 +22,7 @@ def calculs(num_dices) :
             while nouv == 10 :
                 nouv = r.randint(1, 10)
                 l.append(nouv)
-        k += 1
+            k += 1
     l_ori = l.copy()
     if not mises_Q :
         k = 0
