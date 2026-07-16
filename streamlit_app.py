@@ -21,7 +21,6 @@ def calculs(num_dices) :
             mises += 1
     j = 0
     while j < 9:
-        st.write("Cherche : ", 10 + j)
         retour = calculs_start(l, 10 + j)
         mises += retour[0]
         l = retour[1]
@@ -32,11 +31,15 @@ def calculs_start(l, limit) :
     mises = 0
     l_cal = l.copy()
     i = 0
+    pas_trouve = True
     while i < len(l_cal) :
         l_iter = l_cal.copy()
         l_iter.pop(i)
         retour = calculs_rec([l_cal[i]], l_iter, limit)
         if (len(retour) != 0):
+            if pas_trouve :
+                pas_trouve = False
+                st.write("Mises de ", limit)
             mises += 1
             for j in retour:
                 l_cal.remove(j)
