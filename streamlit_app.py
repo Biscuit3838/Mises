@@ -84,6 +84,7 @@ if st.button("Calculer"):
         des = des + str(d) + " "
     for d_r in liste_rest:
         des_rest = des_rest + str(d_r) + " "
+     st.divider()
     st.write("Dés : ", des)
     st.write("Dés restants :", des_rest)
     st.write("Mises : ", mises)
