@@ -44,6 +44,8 @@ def calculs(num_dices) :
         mises += retour[0]
         l = retour[1]
         j += 1
+    l_ori.sort()
+    l_reroll.sort()
     return mises, l_ori, l, l_reroll
 
 def calculs_start(l, limit) :
