@@ -26,14 +26,15 @@ def calculs_start(l, limit) :
     mises = 0
     l_cal = l.copy()
     cont = True
-    while cont:
-        retour = calculs_rec([], l_cal, limit)
-        if (len(retour) == 0):
-            cont = False
-        else:
+    for i in range(len(l_cal)) :
+        l_iter = l_cal.copy()
+        l_iter.pop(i)
+        retour = calculs_rec([l_cal[i]], l_iter, limit)
+        if (len(retour) != 0):
             mises += 1
-            for i in retour:
-                l_cal.remove(i)
+            for j in retour:
+                l_cal.remove(j)
+            i = 0
     return mises, l_cal
 
 def calculs_rec(curr, l, limit) :
