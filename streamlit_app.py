@@ -3,7 +3,7 @@ import random as r
 
 st.title("MISES WOOOOOOO")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Tu entres un nombre. Tu valides. Tu cliques sur valider. Tu pleures parce que tu as min maxé et que tu as 0 mises."
 )
 number_dices = st.number_input("Nombre de dés", step=1)
 
