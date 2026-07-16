@@ -26,7 +26,8 @@ def calculs_start(l, limit) :
     mises = 0
     l_cal = l.copy()
     cont = True
-    for i in range(len(l_cal)) :
+    i = 0
+    while i < len(l_cal) :
         l_iter = l_cal.copy()
         l_iter.pop(i)
         retour = calculs_rec([l_cal[i]], l_iter, limit)
