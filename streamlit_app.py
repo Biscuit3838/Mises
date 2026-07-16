@@ -46,8 +46,7 @@ def calculs(num_dices) :
         l = retour[1]
         j += 1
     l_ori.sort()
-    l_reroll.sort()
-    return mises, l_ori, l, l_reroll
+    return mises, l_ori, l
 
 def calculs_start(l, limit) :
     mises = 0
@@ -95,7 +94,6 @@ if st.button("Calculer"):
     mises = retour[0]
     liste = retour[1]
     liste_rest = retour[2]
-    liste_reroll = retour[3]
     des = ""
     des_rest = ""
     for d in liste:
@@ -105,11 +103,6 @@ if st.button("Calculer"):
     st.divider()
     st.write("Dés : ", des)
     st.write("Dés restants : ", des_rest)
-    if explosion :
-        des_roll = ""
-        for d_roll in liste_reroll :
-            des_roll = des_roll + str(d_roll) + " "
-        st.write("Dés rerolls : ", des_roll)
     if mises_Q :
         st.write("Mises : ", mises, " x 2 = ", mises * 2)
     else :
