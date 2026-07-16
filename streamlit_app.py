@@ -58,7 +58,7 @@ if st.button("Calculer"):
     liste = retour[1]
     liste_rest = retour[2]
     des = ""
-    des_rest
+    des_rest = ""
     for d in liste:
         des = des + str(d) + " "
     for d_r in liste_rest:
