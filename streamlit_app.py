@@ -13,7 +13,6 @@ def calculs(num_dices) :
     for i in range(num_dices):
         l.append(r.randint(1, 10))
     l.sort()
-    l.reverse()
     l_ori = l.copy()
     mises = 0
     for i in l :
