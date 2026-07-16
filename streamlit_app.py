@@ -16,10 +16,16 @@ def calculs(num_dices) :
     l.reverse()
     l_ori = l.copy()
     mises = 0
-    for j in range(9):
-        retour = calculs_start(l, 10 + j)
+    for i in l :
+        if i == 10 :
+            l.remove(i)
+            mises += 1
+    j = 0
+    while j < 8:
+        retour = calculs_start(l, 11 + j)
         mises += retour[0]
         l = retour[1]
+        j += 1
     return mises, l_ori, l
 
 def calculs_start(l, limit) :
@@ -31,7 +37,6 @@ def calculs_start(l, limit) :
         l_iter.pop(i)
         retour = calculs_rec([l_cal[i]], l_iter, limit)
         if (len(retour) != 0):
-            st.write("Test : ", retour, limit)
             mises += 1
             for j in retour:
                 l_cal.remove(j)
