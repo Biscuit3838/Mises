@@ -14,19 +14,20 @@ def calculs(num_dices) :
     l = []
     for i in range(num_dices):
         l.append(r.randint(1, 10))
-    l_ori = l.copy()
-    l_reroll = []
     mises = 0
+    if explosion :
+        k = 0
+        while k < len(l) :
+            nouv = l[k]
+            while nouv == 10 :
+                nouv = r.randint(1, 10)
+                l.append(nouv)
+        k += 1
+    l_ori = l.copy()
     if not mises_Q :
         k = 0
         while k < len(l) :
             if l[k] == 10 :
-                if explosion :
-                    while l[k] == 10 :
-                        mises += 1
-                        l[k] = r.randint(1, 10)
-                        l_reroll.append(l[k])
-                else :
                     mises += 1
                     l.pop(k)
                     k -= 1
