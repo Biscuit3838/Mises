@@ -36,6 +36,8 @@ def calculs_start(l, limit) :
             for j in retour:
                 l_cal.remove(j)
             i = 0
+        else :
+            i += 1
     return mises, l_cal
 
 def calculs_rec(curr, l, limit) :
