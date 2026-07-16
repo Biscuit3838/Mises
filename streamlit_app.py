@@ -25,13 +25,13 @@ def calculs(num_dices) :
 def calculs_start(l, limit) :
     mises = 0
     l_cal = l.copy()
-    cont = True
     i = 0
     while i < len(l_cal) :
         l_iter = l_cal.copy()
         l_iter.pop(i)
         retour = calculs_rec([l_cal[i]], l_iter, limit)
         if (len(retour) != 0):
+            st.write("Test : ", retour, limit)
             mises += 1
             for j in retour:
                 l_cal.remove(j)
