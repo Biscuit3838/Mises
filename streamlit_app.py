@@ -20,7 +20,7 @@ def calculs(num_dices) :
         retour = calculs_start(l, 10 + j)
         mises += retour[0]
         l = retour[1]
-    return mises, l_ori
+    return mises, l_ori, l
 
 def calculs_start(l, limit) :
     mises = 0
@@ -56,8 +56,13 @@ if st.button("Calculer"):
     retour = calculs(number_dices)
     mises = retour[0]
     liste = retour[1]
+    liste_rest = retour[2]
     des = ""
+    des_rest
     for d in liste:
         des = des + str(d) + " "
+    for d_r in liste_rest:
+        des_rest = des_rest + str(d_r) + " "
     st.write("Dés : ", des)
+    st.write("Dés restants :", des_rest)
     st.write("Mises : ", mises)
