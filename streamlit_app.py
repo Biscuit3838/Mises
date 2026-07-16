@@ -56,5 +56,8 @@ if st.button("Calculer"):
     retour = calculs(number_dices)
     mises = retour[0]
     liste = retour[1]
-    st.write("Dés : ", liste)
+    des = ""
+    for d in liste:
+        des += d + " "
+    st.write("Dés : ", des)
     st.write("Mises : ", mises)
