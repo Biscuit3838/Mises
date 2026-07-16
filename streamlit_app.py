@@ -19,7 +19,7 @@ def calculs(num_dices) :
     mises = 0
     if not mises_Q :
         k = 0
-        while k < len(k) :
+        while k < len(l) :
             if l[k] == 10 :
                 if explosion :
                     while l[k] == 10 :
