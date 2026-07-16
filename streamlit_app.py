@@ -6,6 +6,7 @@ st.write(
     "Tu entres un nombre. Tu valides. Tu cliques sur Calculer. Tu pleures parce que tu as min maxé et que tu as 0 mises."
 )
 number_dices = st.number_input("Nombre de dés", step=1)
+st.divider()
 
 
 def calculs(num_dices) :
@@ -72,6 +73,7 @@ def calculs_rec(curr, l_ori, limit) :
     return []
 
 if st.button("Calculer"):
+    st.divider()
     retour = calculs(number_dices)
     mises = retour[0]
     liste = retour[1]
