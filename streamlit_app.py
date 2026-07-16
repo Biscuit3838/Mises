@@ -22,6 +22,7 @@ def calculs(num_dices) :
             mises += 1
     j = 0
     while j < 8:
+        st.write("Cherche : ", limit)
         retour = calculs_start(l, 11 + j)
         mises += retour[0]
         l = retour[1]
@@ -41,7 +42,7 @@ def calculs_start(l, limit) :
             for j in retour:
                 l_cal.remove(j)
             i = 0
-            st.write("Test : ", retour, limit)
+            st.write("Mise : ", retour)
         else :
             i += 1
     return mises, l_cal
