@@ -16,11 +16,13 @@ def calculs(num_dices) :
     l.reverse()
     l_ori = l.copy()
     mises = 0
-    for i in range(len(l)) :
-        if l[i] == 10 :
-            l.pop(i)
+    j = 0
+    while j < len(l) :
+        if l[j] == 10 :
+            l.pop(j)
             mises += 1
-            i -= 1
+            j -= 1
+        j += 1
     j = 0
     while j < 9:
         retour = calculs_start(l, 10 + j)
