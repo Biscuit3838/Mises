@@ -36,10 +36,10 @@ def calculs(num_dices) :
     l.reverse()
     if mises_Q :
         j = 15
-        limit = 21
+        limit = 22
     else :
         j = 10
-        limit = 18
+        limit = 19
     while j < limit:
         retour = calculs_start(l, j)
         mises += retour[0]
