@@ -52,7 +52,6 @@ def calculs_rec(curr, l, limit) :
             return []
     return []
 
-st.write("Number of dices : ", number_dices)
 if st.button("Calculer"):
     retour = calculs(number_dices)
     mises = retour[0]
